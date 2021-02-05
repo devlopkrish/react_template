@@ -1,92 +1,3 @@
-/*
-import { Button, Grid, makeStyles, TextField } from '@material-ui/core'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-     
-    },
-    menuButton: {
-      marginRight: theme.spacing(4),
-    },
-    title: {
-      flexGrow: 1,
-      fontFamily:'Alfa Slab One', 
-      letterSpacing:2,
-
-    },
-  }));
-
-
-
-function Stage() {
-    const classes = useStyles();
-  
-    return (
-     <Grid container >
-      <Grid container item xs={12}>
-
-     <Grid item xs={4}>
-      <h1>Column 1</h1>
-
-     </Grid>
-
-     <Grid item xs={4}>
-      <h1>Column 2</h1>
-
-     </Grid>
-
-     <Grid item xs={4}>
-      <h1>Column 3</h1>
-
-     </Grid>
-
-    
-
-
-
-      </Grid>
-     
-
-
-     </Grid>
-
-
-    )
-      
-  }
-
-
-function SideMenu() {
-
-
- <Grid item xs={4}>
-   
-
-   </Grid>
-
-
-
-
-
-}
-
-
-
-
-
-
-export default Stage;
-
-*/
-
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
@@ -101,8 +12,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import CastForEducationIcon from "@material-ui/icons/CastForEducation";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
-import TextField from '@material-ui/core/TextField';
-
+import TextField from "@material-ui/core/TextField";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -141,17 +51,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     //backgroundColor: theme.palette.background.paper,
-    backgroundColor:"#252a34" ,
+    backgroundColor: "#252a34",
     display: "flex",
     height: 400,
   },
   tabs: {
-    backgroundColor:"#f6f6f6",
+    backgroundColor: "#f6f6f6",
     borderRight: `1px solid ${theme.palette.divider}`,
   },
 }));
 
-export default function Stage() {
+function TabControl() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -160,11 +70,7 @@ export default function Stage() {
   };
 
   return (
-
-
     <div className={classes.root}>
-
-
       <Tabs
         orientation="vertical"
         variant="scrollable"
@@ -232,9 +138,7 @@ export default function Stage() {
           {...a11yProps(4)}
         />
       </Tabs>
-      <TabPanel value={value} index={0}>
-       
-      </TabPanel>
+      <TabPanel value={value} index={0}></TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
       </TabPanel>
@@ -247,7 +151,9 @@ export default function Stage() {
       <TabPanel value={value} index={4}>
         Item Five
       </TabPanel>
-
     </div>
   );
 }
+
+
+export default TabControl;

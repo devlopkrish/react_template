@@ -1,6 +1,9 @@
 import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
 import TopAppBar from './Components/appBar'
+import MainAssemble from './Components/assemble';
+import SearchBar from './Components/searcbar';
+import TabControl from './Components/tabControl';
 
 
 
@@ -33,7 +36,8 @@ function MainPage() {
         >
 
         <TopAppBar />
-
+        <SearchBar />
+        <MainAssemble />
         </Grid>
 
     ) 

@@ -25,6 +25,8 @@ function App() {
        
       <Route path="/main" component={MainPage} />
 
+      <Route path="/stage" component={Stage} />
+
       </div>
       </Switch>
     </Router>
