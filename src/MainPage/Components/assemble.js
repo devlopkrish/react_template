@@ -1,4 +1,4 @@
-import { Button, Grid, makeStyles, TextField } from "@material-ui/core";
+import { Button, Grid, makeStyles, TextField, Box } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
@@ -7,6 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import TabControl from "./tabControl";
+import AddIcon from "@material-ui/icons/Add";
+import Fab from "@material-ui/core/Fab";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
+import MediaCard from "./helpercards/helpCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,18 +30,32 @@ function MainAssemble() {
   const classes = useStyles();
 
   return (
-    <Grid container style={{marginTop:-60,marginLeft:10}}>
-      <Grid container item xs={12}> 
-        <Grid item xs={10}>
+    <Grid container style={{ marginTop: 0, marginLeft: 10 }}>
+      <Grid container item xs={12}>
+        <Grid item xs={12}>
           <TabControl />
-        </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="flex-end"
+            alignItems="center"
+          >
+            <Box p zIndex="modal" style={{ top: 500 }}>
+              <Fab color="primary" aria-label="add">
+                <WbSunnyIcon />
+              </Fab>
+            </Box>
+          </Grid>
 
-        <Grid item xs={2}>
-          <h1>Column 2</h1>
+
+
+
+
+
         </Grid>
+ 
       </Grid>
     </Grid>
   );
 }
-
 export default MainAssemble;

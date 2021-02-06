@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
    // display: "flex",
  //   flexWrap: "wrap",
-    width: 950,
+   width:1115,
     marginLeft:10,
 
   },

@@ -13,6 +13,10 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import CastForEducationIcon from "@material-ui/icons/CastForEducation";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import TextField from "@material-ui/core/TextField";
+import WebPage from "./tabDivs/webpage";
+import PdfPage from "./tabDivs/pdfpage";
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,7 +57,8 @@ const useStyles = makeStyles((theme) => ({
     //backgroundColor: theme.palette.background.paper,
     backgroundColor: "#252a34",
     display: "flex",
-    height: 400,
+    height: 550,
+  
   },
   tabs: {
     backgroundColor: "#f6f6f6",
@@ -138,15 +143,16 @@ function TabControl() {
           {...a11yProps(4)}
         />
       </Tabs>
-      <TabPanel value={value} index={0}></TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
+      <TabPanel value={value} index={0}>
+      <WebPage url="https://en.wikipedia.org/wiki/Main_Page" />
       </TabPanel>
+      <TabPanel value={value} index={1}></TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <PdfPage />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+      <WebPage url="https://www.youtube.com/embed/ofgIDZHTjTQ" />
+    
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five
@@ -154,6 +160,7 @@ function TabControl() {
     </div>
   );
 }
+
 
 
 export default TabControl;
