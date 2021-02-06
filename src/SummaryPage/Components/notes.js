@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import NoteChips from './notechip';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,14 +26,8 @@ const useStyles = makeStyles((theme) => ({
       <div>
       
        
-        <TextField
-          id="filled-multiline-static"
-          label="Notes"
-          multiline
-          rows={40}
-          defaultValue="Take Notes Here"
-          variant="filled"
-        />
+  
+        <NoteChips text="Nevertheless, is constructed and presented each year due to its significance The document is the Ministry's view[clarification needed] on the state of the economy of the country. "/>
       </div>
   
        
@@ -44,3 +39,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default Notes;
+
+/*
+      <TextField
+          id="filled-multiline-static"
+          label="Notes"
+          multiline
+          rows={40}
+          defaultValue="Take Notes Here"
+          variant="filled"
+        />
+*/
