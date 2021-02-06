@@ -10,7 +10,11 @@ import TabControl from "./tabControl";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
-import MediaCard from "./helpercards/helpCard";
+import MainButton from "./helpercards/mainButton";
+import PopperButton from "../popperButton";
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,14 +44,9 @@ function MainAssemble() {
             justify="flex-end"
             alignItems="center"
           >
-            <Box p zIndex="modal" style={{ top: 500 }}>
-              <Fab color="primary" aria-label="add">
-                <WbSunnyIcon />
-              </Fab>
-            </Box>
+         <PopperButton />
+
           </Grid>
-
-
 
 
 

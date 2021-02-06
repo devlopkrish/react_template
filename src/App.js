@@ -6,7 +6,7 @@ import Stage from './stage';
 import Intro from './Intro/intro';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import MainPage from './MainPage/mainpage';
-
+import SummaryPage from './SummaryPage/summarypage';
 
 
 
@@ -26,7 +26,7 @@ function App() {
       <Route path="/main" component={MainPage} />
 
       <Route path="/stage" component={Stage} />
-
+      <Route path="/summary" component={SummaryPage} />
       </div>
       </Switch>
     </Router>
